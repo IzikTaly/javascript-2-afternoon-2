@@ -19,7 +19,11 @@ var arr = [10,20,30];
 
 //Code Here
 
+var first
 
+function first(arr){
+       return arr[0]
+     }
 
 ////////// PROBLEM 2 //////////
 
@@ -34,7 +38,11 @@ var arr = [40,50,60];
 
 //Code Here
 
+function last (arr) {
 
+  var last = arr.pop();
+  return last
+}
 
 ////////// PROBLEM 3 //////////
 
@@ -49,7 +57,14 @@ var family = ['Tyler', 'Jordyn', 'Ryan', 'Chelsey', 'Ireland'];
 
 //Code Here
 
+function looper (family){
 
+  for (let i = 0 ; i < family.length ; i++)
+  {
+    alert(family[i]);
+  }
+
+}
 
 ////////// PROBLEM 4 //////////
 
@@ -63,6 +78,15 @@ var letters = ['A', 'B', 'C', 'D', 'E'];
 */
 
 //Code Here
+
+
+function reversedLooper(letters){
+
+  for (var i = letters.length-1; i >= 0; i--) {
+    alert(letters[i], i );
+   }
+
+}
 
 
 
@@ -79,8 +103,16 @@ var nums = [1,2,3,6,22,98,45,23,22,12];
 
 //Code Here
 
-
-
+function evenFinder (nums) {
+  var result = []
+  for(let i = 0; i < nums.length ;i++)
+  {
+    if(nums[i] % 2 === 0){
+      result.push(nums[i]);
+    }
+  }
+  return result;
+}
 
 
 
@@ -105,7 +137,20 @@ var numbersArray = [1,2,34,54,55,34,32,11,19,17,54,66,13];
   Have divider return an Array with the first item in the array being the evens array (all the even values from numbersArray) and the second item in the Array being the odds array (all the odd values from numbersArray).
 */
 
-//Code Here
+  var divider = (numbersArray) => {
+    var result = [];
+    for (var i = 0; i < nums.length; i++) {
+      if (nums[i] % 2 === 0) {
+      result[0].push(nums[i]);
+      } else {
+      result[1].push(nums[i]);
+      }
+  
+	  }
+	return result;
+}
+
+console.log(divider(numbersArray));
 
 
 
@@ -129,6 +174,15 @@ var getRandomArbitrary = function() {
 //Code Here
 
 
+ function finder(arr){
+   var random = getRandomArbitrary()
+   console.log(random)
+   for(x in arr){
+     if(random===arr[x]){
+       return true
+     } 
+   }return false
+ }
 
 ////////// PROBLEM 8 //////////
 
@@ -158,6 +212,36 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
 //Code Here
 
 
+var removeItem = (myGroceryList, item) => {
+
+  for(let i = 0; i < myGroceryList.length; i++){
+
+  if(item === myGroceryList[i]){
+
+    myGroceryList.splice(i,1)
+
+  }
+  
+  }
+
+  return myGroceryList
+
+}
+
+var removeItem = (myGroceryList, item) => {
+
+  for (let i = 0 ; i < myGroceryList.length ; i++){
+
+
+    if(){}
+
+
+  }
+
+
+
+}
+
 
 ////////// PROBLEM 9 //////////
 
@@ -167,7 +251,17 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
 
 //Code Here
 
+function maker (){
 
+  var array = []
+
+  for (let i = 0 ; i > 215 ; i++){
+
+    array.push(i);
+
+  }
+  return array;
+}
 
 ////////// PROBLEM 10 //////////
 
@@ -183,6 +277,7 @@ var numbers = [5, '9', 16, 19, '25', '34', 48];
   
 //Code Here
 
+var addTen = (numbers) => {}
 
 
 ////////// PROBLEM 11 //////////
