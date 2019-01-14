@@ -137,20 +137,17 @@ var numbersArray = [1,2,34,54,55,34,32,11,19,17,54,66,13];
   Have divider return an Array with the first item in the array being the evens array (all the even values from numbersArray) and the second item in the Array being the odds array (all the odd values from numbersArray).
 */
 
-  var divider = (numbersArray) => {
-    var result = [];
-    for (var i = 0; i < nums.length; i++) {
-      if (nums[i] % 2 === 0) {
-      result[0].push(nums[i]);
-      } else {
-      result[1].push(nums[i]);
-      }
+function divider (numbersArray) {
+
+  var evens = numbersArray.filter(function(num) {return num % 2 === 0})
+
+  var odds = numbersArray.filter(function(num) {return num % 2 !== 0})
+
+  return [evens, odds]
   
-	  }
-	return result;
 }
 
-console.log(divider(numbersArray));
+divider(numbersArray);
 
 
 
@@ -233,7 +230,7 @@ var removeItem = (myGroceryList, item) => {
   for (let i = 0 ; i < myGroceryList.length ; i++){
 
 
-    if(){}
+    if(i =0){}
 
 
   }
@@ -277,7 +274,20 @@ var numbers = [5, '9', 16, 19, '25', '34', 48];
   
 //Code Here
 
-var addTen = (numbers) => {}
+var addTen = (numbers) => {
+
+  var newArr = []
+
+  for (i in numbers){
+
+    i += 10 
+
+    newArr.push(i);
+
+  }
+
+
+}
 
 
 ////////// PROBLEM 11 //////////
@@ -303,6 +313,23 @@ for(var i = 0; i < num2; i++){
 
 //Code Here
 
+function longer (arr1 , arr2){
+
+  var longest 
+
+  if (arr1.length > arr2.length){
+    var longest = arr1
+  }
+
+  else{
+
+    var longest = arr2
+
+  }
+
+  return longest;
+
+}
 
 
 /*
@@ -315,7 +342,18 @@ for(var i = 0; i < num2; i++){
 
 //Code Here
 
+function both (arr1 , arr2) {
+  var arr3 = arr1.concat(arr2);
 
+  arr3.filter(function(elem, pos) {
+return arr3.indexOf(elem) == pos;
+});
+
+  return arr3;
+
+}
+
+both(arr1,arr2)
 
 ////////// PROBLEM 12 //////////
 
@@ -355,6 +393,10 @@ var colt = {
 
 //Code Here
 
+devMountainEmployees.push(tyler);
+devMountainEmployees.push(cahlan);
+devMountainEmployees.push(ryan);
+devMountainEmployees.push(colt);
 
 
 /*
@@ -364,6 +406,11 @@ var colt = {
 
 //Code Here
 
+for(var i = 0; i < devMountainEmployees.length; i++){
+  if(devMountainEmployees[i].name === 'Cahlan'){
+    devMountainEmployees.splice(i,1);
+  }
+}
 
 
 ////////// PROBLEM 13 //////////
@@ -376,7 +423,7 @@ var colt = {
 
 //Code Here
 
-
+var users = []
 
 /*
   Now add three user objects to your users array. Each user object should contain the following properties. name, email, password, username.
@@ -395,7 +442,29 @@ var user1 = {
 
 //Code Here
 
+var user2 = {
 
+    name: 'Isaac talley',
+    email: 'IsaacEmail@gmail.com',
+    password: 'myDadIsTheCaptain',
+    username: 'dunkHandsome'
+
+};
+
+
+var user3 = {
+
+    name: 'Smack Danson',
+    email: 'dropitoffstinkmaster@gmail.com',
+    password: 'myDadIsTheOtherCaptain',
+    username: 'spirit donsle'
+
+};
+
+
+users.push(user1);
+users.push(user2);
+users.push(user3);
 
 /*
   Now you have a very common data structure. 
@@ -409,7 +478,15 @@ var user1 = {
 
 //Code Here
 
+for (let i = 0 ; i > users.length ; i++){
 
+  if (users[i].email == "tylermcginnis33@gmail.com"){
+
+   users.splice(i,1);
+
+  }
+
+}
 
 /*
   The activity we just did is very much how data works in 'the real world'.
